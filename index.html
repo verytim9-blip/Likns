@@ -1,235 +1,219 @@
-<!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VIP Hub - Актуальные ссылки</title>
-  <style>
-    :root {
-      --bg-color: #0b0c10;
-      --card-bg: rgba(255, 255, 255, 0.05);
-      --card-border: rgba(255, 255, 255, 0.1);
-      --text-main: #ffffff;
-      --text-muted: #a0a5b5;
-      --accent-color: #ff2a5f;
-      --accent-gradient: linear-gradient(135deg, #ff2a5f 0%, #8a2be2 100%);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP CLUB 18+</title>
+    <style>
+        :root {
+            --bg-color: #0d0c10;
+            --card-bg: rgba(20, 20, 25, 0.63);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --text-main: #ffffff;
+            --text-muted: #a0a0b0;
+            --accent-color: #ff2a5f;
+            --accent-gradient: linear-gradient(135deg, #ff2a5f 0%, #8a2be2 100%);
+        }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
 
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-      overflow-x: hidden;
-      position: relative;
-    }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+            position: relative;
+        }
 
-    /* Фоновое неоновое свечение */
-    .glow-bg {
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      background: var(--accent-gradient);
-      filter: blur(120px);
-      border-radius: 50%;
-      opacity: 0.35;
-      z-index: 0;
-      animation: pulse 6s ease-in-out infinite alternate;
-    }
+        /* Фоновое неоновое свечение */
+        .bg-img {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: var(--accent-gradient);
+            filter: blur(120px);
+            border-radius: 50%;
+            opacity: 0.35;
+            animation: pulse 6s ease-in-out infinite alternate;
+        }
 
-    @keyframes pulse {
-      0% { transform: scale(1) translate(-10%, -10%); }
-      100% { transform: scale(1.2) translate(10%, 10%); }
-    }
+        @keyframes pulse {
+            0% { transform: scale(1) translate(-10%, -10%); }
+            100% { transform: scale(1.2) translate(10%, 10%); }
+        }
 
-    .container {
-      width: 100%;
-      max-width: 420px;
-      background: rgba(18, 18, 24, 0.75);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid var(--card-border);
-      border-radius: 24px;
-      padding: 32px 24px;
-      text-align: center;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
+        .container {
+            width: 100%;
+            max-width: 420px;
+            background: rgba(18, 18, 24, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
 
-    .avatar {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      margin: 0 auto 16px;
-      object-fit: cover;
-      border: 2px solid var(--accent-color);
-      box-shadow: 0 0 15px rgba(255, 42, 95, 0.4);
-    }
+        .avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            object-fit: cover;
+            border: 2px solid var(--accent-color);
+            box-shadow: 0 0 15px rgba(255, 42, 95, 0.4);
+        }
 
-    h1 {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
+        h1 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
 
-    p.subtitle {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 24px;
-    }
+        p.subtitle {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
 
-    .status-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(0, 230, 118, 0.1);
-      border: 1px solid rgba(0, 230, 118, 0.2);
-      color: #00e676;
-      font-size: 12px;
-      padding: 6px 12px;
-      border-radius: 20px;
-      margin-bottom: 24px;
-    }
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(0, 230, 118, 0.1);
+            color: #00e676;
+            font-size: 12px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
 
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      background-color: #00e676;
-      border-radius: 50%;
-      box-shadow: 0 0 8px #00e676;
-    }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #00e676;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #00e676;
+        }
 
-    .links-list {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
 
-    .btn-link {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 20px;
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 16px;
-      color: var(--text-main);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 15px;
-      transition: all 0.2s ease;
-    }
+        .btn-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
 
-    .btn-link:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.25);
-      transform: translateY(-2px);
-    }
+        .btn-link:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
 
-    .btn-link.primary {
-      background: var(--accent-gradient);
-      border: none;
-      box-shadow: 0 4px 15px rgba(255, 42, 95, 0.3);
-    }
+        .btn-link.primary {
+            background: var(--accent-gradient);
+            border: none;
+            box-shadow: 0 4px 15px rgba(255, 42, 95, 0.3);
+        }
 
-    .btn-link.primary:hover {
-      opacity: 0.95;
-      transform: translateY(-2px);
-    }
+        .btn-link.primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
 
-    .icon {
-      font-size: 18px;
-    }
-
-    .footer-text {
-      margin-top: 28px;
-      font-size: 11px;
-      color: var(--text-muted);
-      line-height: 1.4;
-    }
-  </style>
+        .footer-text {
+            margin-top: 24px;
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="glow-bg"></div>
+    <div class="bg-img"></div>
 
-  <div class="container">
-    <img id="avatar" class="avatar" src="" alt="Avatar">
-    <h1 id="title">Загрузка...</h1>
-    <p id="subtitle" class="subtitle">...</p>
+    <div class="container">
+        <img id="avatar" class="avatar" src="" alt="Avatar">
+        <h1 id="title">Загрузка...</h1>
+        <p id="subtitle" class="subtitle">Загрузка...</p>
+        
+        <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Все ссылки активны</span>
+        </div>
 
-    <div class="status-badge">
-      <span class="status-dot"></span>
-      <span>Все ссылки активны</span>
+        <div class="links-list">
+            <!-- Канал Переходник -->
+            <a id="channel-btn" href="#" target="_blank" class="btn-link primary">
+                <span>🍀 Канал Переходник</span>
+                <span class="icon">➔</span>
+            </a>
+            
+            <!-- Резервный Бот -->
+            <a id="bot-btn" href="#" target="_blank" class="btn-link">
+                <span>🤖 Резервный Бот</span>
+                <span class="icon">➔</span>
+            </a>
+
+            <!-- Связь с Админом -->
+            <a id="admin-btn" href="#" target="_blank" class="btn-link">
+                <span>👑 Связь с Админом</span>
+                <span class="icon">➔</span>
+            </a>
+        </div>
+
+        <div class="footer-text">
+            Сохраните эту страницу в закладки или на рабочий стол, чтобы всегда иметь доступ к актуальным ресурсам. <br><strong>18+</strong>
+        </div>
     </div>
 
-    <div class="links-list">
-      <!-- Основной ТГ Канал -->
-      <a id="channel-btn" href="#" target="_blank" class="btn-link primary">
-        <span>📢 Наш ТГ Канал</span>
-        <span class="icon">➔</span>
-      </a>
+    <script>
+        // ==========================================
+        // НАСТРОЙКИ: Ваши ссылки и тексты
+        // ==========================================
+        const CONFIG = {
+            channelUrl: "https://t.me/+4456iZdleW83NjUy", // Канал переходник
+            botUrl: "https://t.me/TypedEvenbot",         // Ссылка на ТГ бота
+            adminUrl: "https://t.me/oiotop",              // Ссылка на Админа
 
-      <!-- ТГ Бот -->
-      <a id="bot-btn" href="#" target="_blank" class="btn-link">
-        <span>🤖 Резервный Бот</span>
-        <span class="icon">➔</span>
-      </a>
+            title: "VIP CLUB 18+",
+            subtitle: "Официальный хаб | Все актуальные ссылки",
+            avatarUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=300&auto=format&fit=crop"
+        };
 
-      <!-- ТГ Чат -->
-      <a id="chat-btn" href="#" target="_blank" class="btn-link">
-        <span>💬 Наш Чат</span>
-        <span class="icon">➔</span>
-      </a>
+        // Применение настроек
+        document.getElementById("title").innerText = CONFIG.title;
+        document.getElementById("subtitle").innerText = CONFIG.subtitle;
+        document.getElementById("avatar").src = CONFIG.avatarUrl;
 
-      <!-- Связь с Админом -->
-      <a id="admin-btn" href="#" target="_blank" class="btn-link">
-        <span>👑 Связь с Админом</span>
-        <span class="icon">➔</span>
-      </a>
-    </div>
-
-    <div class="footer-text">
-      Сохраните эту страницу в закладки или на рабочий стол, чтобы всегда иметь доступ к актуальным ресурсам. <br><b>18+</b>
-    </div>
-  </div>
-
-  <script>
-    // ==========================================
-    // НАСТРОЙКИ: Укажи свои ссылки и тексты тут!
-    // ==========================================
-    const CONFIG = {
-      // Твои реальные ссылки:
-      channelUrl: "https://t.me/+3pSyDPe4R6E5MGNi", // Ссылка на твой ТГ канал
-      chatUrl: "https://t.me/+4456iZdleW83NjUy",       // Ссылка на твой ТГ чат
-      botUrl: "https://t.me/TypedEvenbot",         // Ссылка на твоего ТГ бота
-      adminUrl: "https://t.me/oiotop",     // Ссылка на ТГ Админа
-      
-      // Тексты на визитке:
-      title: "KLEVER CLUB 18+",
-      subtitle: "Официальный хаб | Все актуальные ссылки",
-      avatarUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=150&auto=format&fit=crop&q=80"
-    };
-
-    // Применение настроек к элементам страницы
-    document.getElementById("title").innerText = CONFIG.title;
-    document.getElementById("subtitle").innerText = CONFIG.subtitle;
-    document.getElementById("avatar").src = CONFIG.avatarUrl;
-
-    document.getElementById("channel-btn").href = CONFIG.channelUrl;
-    document.getElementById("bot-btn").href = CONFIG.botUrl;
-    document.getElementById("chat-btn").href = CONFIG.chatUrl;
-    document.getElementById("admin-btn").href = CONFIG.adminUrl;
-  </script>
+        document.getElementById("channel-btn").href = CONFIG.channelUrl;
+        document.getElementById("bot-btn").href = CONFIG.botUrl;
+        document.getElementById("admin-btn").href = CONFIG.adminUrl;
+    </script>
 </body>
 </html>
