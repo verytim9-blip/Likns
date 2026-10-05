@@ -1,4 +1,4 @@
-     <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -180,6 +180,12 @@
                 <span class="icon">➔</span>
             </a>
 
+            <!-- Купить ссылки -->
+            <a id="buy-btn" href="#" target="_blank" class="btn-link">
+                <span>🛒 Купить ссылки</span>
+                <span class="icon">➔</span>
+            </a>
+
             <!-- Связь с Админом -->
             <a id="admin-btn" href="#" target="_blank" class="btn-link">
                 <span>👑 Связь с Админом</span>
@@ -188,6 +194,7 @@
         </div>
 
         <div class="footer-text">
+            Чаты и каналы ТГ они все отсортированы.<br>
             Сохраните эту страницу в закладки или на рабочий стол, чтобы всегда иметь доступ к актуальным ресурсам. <br><strong>18+</strong>
         </div>
     </div>
@@ -199,9 +206,10 @@
         const CONFIG = {
             channelUrl: "https://t.me/+4456iZdleW83NjUy", // Канал переходник
             botUrl: "https://t.me/TypedEvenbot",         // Ссылка на ТГ бота
+            buyUrl: "https://t.me/oiotop",                // Ссылка на покупку ссылок (ведёт на вашего ТГ)
             adminUrl: "https://t.me/oiotop",              // Ссылка на Админа
 
-            title: "KLEVER CLUB 18+",
+            title: "VIP CLUB 18+",
             subtitle: "Официальный хаб | Все актуальные ссылки",
             avatarUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=300&auto=format&fit=crop"
         };
@@ -213,6 +221,7 @@
 
         document.getElementById("channel-btn").href = CONFIG.channelUrl;
         document.getElementById("bot-btn").href = CONFIG.botUrl;
+        document.getElementById("buy-btn").href = CONFIG.buyUrl;
         document.getElementById("admin-btn").href = CONFIG.adminUrl;
     </script>
 </body>
